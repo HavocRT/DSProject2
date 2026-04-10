@@ -1,0 +1,117 @@
+.batch-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .batch-stats { grid-template-columns: repeat(2, 1fr); }
+}
+
+.stat-card {
+  background: var(--white);
+  border: 1px solid var(--grey-200);
+  border-radius: var(--radius);
+  padding: 1.2rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.stat-card.high { border-color: var(--red-light); background: var(--red-ghost); }
+.stat-card.low  { border-color: #bbf7d0; background: #f0fdf4; }
+
+.stat-value {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2rem;
+  color: var(--grey-800);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: var(--grey-400);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.filter-group {
+  display: flex;
+  gap: 4px;
+}
+
+.filter-btn {
+  padding: 5px 14px;
+  border-radius: 8px;
+  border: 1.5px solid var(--grey-200);
+  background: transparent;
+  color: var(--grey-600);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.filter-btn:hover { border-color: var(--red-light); color: var(--red-primary); }
+.filter-btn.active { background: var(--red-primary); border-color: var(--red-primary); color: var(--white); }
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.results-table th {
+  text-align: left;
+  padding: 10px 14px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--grey-400);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--grey-200);
+  white-space: nowrap;
+}
+
+.results-table th.sortable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.results-table th.sortable:hover { color: var(--red-primary); }
+
+.results-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--grey-100);
+  vertical-align: middle;
+}
+
+.results-table tr:last-child td { border-bottom: none; }
+
+.results-table tr.row-high { background: var(--red-ghost); }
+.results-table tr:hover:not(.row-high) { background: var(--grey-50); }
+
+.patient-name {
+  font-weight: 500;
+  color: var(--grey-800);
+}
+
+.overall-bar {
+  width: 100px;
+  height: 6px;
+  background: var(--grey-100);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.overall-fill {
+  height: 100%;
+  border-radius: 99px;
+  transition: width 0.5s ease;
+}

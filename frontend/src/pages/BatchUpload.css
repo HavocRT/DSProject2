@@ -1,0 +1,87 @@
+.csv-headers-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.csv-col-chip {
+  background: var(--grey-100);
+  color: var(--grey-600);
+  padding: 3px 10px;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-family: monospace;
+  border: 1px solid var(--grey-200);
+}
+
+.drop-zone {
+  border: 2px dashed var(--grey-200);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  cursor: pointer;
+  transition: all 0.18s;
+  background: var(--grey-50);
+}
+
+.drop-zone:hover,
+.drop-zone.dragging {
+  border-color: var(--red-mid);
+  background: var(--red-ghost);
+}
+
+.drop-zone.has-file {
+  border-style: solid;
+  border-color: var(--grey-200);
+  background: var(--white);
+  padding: 1.2rem 1.5rem;
+}
+
+.drop-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.drop-icon {
+  font-size: 2rem;
+  color: var(--red-light);
+}
+
+.drop-text {
+  font-size: 0.95rem;
+  color: var(--grey-600);
+}
+
+.drop-link {
+  color: var(--red-primary);
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.drop-sub {
+  font-size: 0.78rem;
+  color: var(--grey-400);
+}
+
+.drop-file-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.drop-file-icon {
+  font-size: 1.8rem;
+}
+
+.drop-file-name {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--grey-800);
+}
+
+.drop-file-size {
+  font-size: 0.78rem;
+  color: var(--grey-400);
+}
